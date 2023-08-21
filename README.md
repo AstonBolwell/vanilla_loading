@@ -1,2 +1,2 @@
-# cace_loading
-FiveM loadingscreen
+# Vanilla Loading
+(c) Aston Bolwell
