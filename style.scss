@@ -1,0 +1,91 @@
+@import url('./misc/Chalet-LondonNineteenSixty.ttf');
+
+body{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+
+    #background, #mask, #foreground, #curtain{
+
+        width: 110%;
+        height: 110%;
+
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+        
+
+        //transition: translate 14s, opacity 2s;
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    #background{
+        background-image: url("./images/Slide1/background.png");
+        z-index: 0;
+
+        transform: translate(-50%, -50%);
+    }
+
+    #mask{
+        background-image: url("./images/Slide1/mask.png");
+        z-index: 1;
+
+        transform: translate(-50%, -50%) scale(130%);
+    }
+
+    #foreground{
+        background-image: url("./images/Slide1/foreground.png");
+        z-index: 2;
+
+        transform: translate(-50%, -50%);
+    }
+
+    #curtain{
+        background-color: black;
+        z-index: 3;
+
+        transform: translate(-50%, -50%);
+    }
+
+    #status{
+        position: absolute;
+        width: 8vw;
+        aspect-ratio: 5;
+        right: 1vw;
+        bottom: 1vw;
+        background-color: rgba(0, 0, 0, 0.5);
+        //background-color: red;
+        border-radius: 0.2vw;
+
+        padding: 0;
+
+        z-index: 4;
+
+        .text{
+            //background-color: blue;
+            width: calc(8vw - (8vw/5));
+            height: calc(8vw / 5);
+            color: white;
+            font-size: calc((8vw / 5) - 0.8vw);
+            font-family: 'Chalet LondonNineteenSixty', sans-serif;
+            text-align: center;
+            vertical-align: middle;
+            line-height: calc((8vw / 5) - 0.1vw);
+        }
+
+        .spinner{
+            position: absolute;
+            right: 0.2vw;
+            top: 0.2vw;
+            height: calc((8vw / 5) - 0.4vw);
+            aspect-ratio: 1;
+            margin: 0;
+        }
+    }
+}
